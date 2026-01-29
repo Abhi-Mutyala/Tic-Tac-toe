@@ -230,8 +230,14 @@ while(c>0):
                                 
                         if(co==1 and cx==0 and cnil==2):
                             k=tlist.index(i)
-                            i[ind]='o'
+                            if(i[2]=='-'):
+                                ind=2
+                                i[ind]='o'
+                            else:
+                                i[ind]='o'
 
+
+                            
                             
                             if(k==0):
                                 tlist[0][ind]='o'
