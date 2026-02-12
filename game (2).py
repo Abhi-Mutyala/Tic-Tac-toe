@@ -59,9 +59,6 @@ while(c>0):
         else:
             print("I won")
         break
-    
-    
-        
     else:
         
         if(count==9):
@@ -118,7 +115,7 @@ while(c>0):
                     print() 
                 continue
             else:
-                xx=1
+                xx=1 #for iterating through the priorities
                 if(xx==1):
                     
                     l=0
@@ -150,9 +147,10 @@ while(c>0):
                                 tlist[ind][1]='o'
                             elif(k==5):
                                 tlist[ind][2]='o'
-                            elif(k==6 or k==7):
+                            elif(k==6):
                                 tlist[ind][ind]='o'
-                                   
+                            elif(k==7):
+                                tlist[ind][2-ind]='o'                                 
                                 
                             box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
                             xx=0    
@@ -235,10 +233,9 @@ while(c>0):
                                 i[ind]='o'
                             else:
                                 i[ind]='o'
-
-
-                            
-                            
+                                
+                                
+                                
                             if(k==0):
                                 tlist[0][ind]='o'
                             elif(k==1):
@@ -328,7 +325,10 @@ while(c>0):
                                         ind=i.index(j)
                                 if(cx==0 and co==0 and cnil==3):
                                     k=tlist.index(i)
+                                    if(i[1]=='-'):
+                                        ind=1
                                     i[ind]='o'
+                            
                                     
                                     if(k==0):
                                         tlist[0][ind]='o'
