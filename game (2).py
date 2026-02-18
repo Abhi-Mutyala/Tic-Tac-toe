@@ -325,11 +325,16 @@ while(c>0):
                                         ind=i.index(j)
                                 if(cx==0 and co==0 and cnil==3):
                                     k=tlist.index(i)
-                                    if(i[1]=='-'):
+                                    if(tlist.index(i)==1):
                                         ind=1
-                                    i[ind]='o'
-                            
+                                        i[ind]='o'
                                     
+                                    else:
+                                        
+                                        if(i[2]=='-'):
+                                            ind=2
+                                            i[ind]='o'
+                    
                                     if(k==0):
                                         tlist[0][ind]='o'
                                     elif(k==1):
