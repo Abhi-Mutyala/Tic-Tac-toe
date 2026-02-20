@@ -6,7 +6,12 @@ for i in box:
     print()
 g=0
 if(g==0):
+    ele=input("Enter the element you want x or o:")
     chance=input("Do you want to start first or shall I(I for you U for me):")
+    if(ele=='x'):
+        ou='o'
+    else:
+        ou='x'
     g+=1
 turn=1
 while(c>0):
@@ -77,7 +82,7 @@ while(c>0):
                 co=place%10
                 
                 if(box[r-1][co-1]=='-'):
-                    el=input("enter the element:")
+                    el=ele
                     box[r-1][co-1]=el
                     
                     for i in box:
@@ -102,7 +107,7 @@ while(c>0):
         elif(chance=='U'):
             print("My chance")  
             if(turn==1):
-                box[1][1]='o'
+                box[1][1]=ou
                 turn+=1
                 chance='I'
                 tlist=[]
@@ -126,31 +131,31 @@ while(c>0):
                         ind=0
                         cnil=0
                         for j in i:
-                            if(j=='o'):
+                            if(j==ou):
                                 co+=1
                             elif(j=='-'):
                                 cnil+=1
                                 ind=i.index(j)
                         if(co==2 and cnil==1):
-                            i[ind]='o'
+                            i[ind]=ou
                             
                             k=tlist.index(i)
                             if(k==0):
-                                tlist[0][ind]='o'
+                                tlist[0][ind]=ou
                             elif(k==1):
-                                tlist[1][ind]='o'
+                                tlist[1][ind]=ou
                             elif(k==2):
-                                tlist[2][ind]='o'
+                                tlist[2][ind]=ou
                             elif(k==3):
-                                tlist[ind][0]='o'
+                                tlist[ind][0]=ou
                             elif(k==4):
-                                tlist[ind][1]='o'
+                                tlist[ind][1]=ou
                             elif(k==5):
-                                tlist[ind][2]='o'
+                                tlist[ind][2]=ou
                             elif(k==6):
-                                tlist[ind][ind]='o'
+                                tlist[ind][ind]=ou
                             elif(k==7):
-                                tlist[ind][2-ind]='o'                                 
+                                tlist[ind][2-ind]=ou                               
                                 
                             box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
                             xx=0    
@@ -164,41 +169,41 @@ while(c>0):
                     for i in tlist:
                         if(l==1):
                             break
-                        cx=0
+                        ce=0
                         ind=0
                         cnil=0
                         for j in i: 
-                            if(j=='x'): 
-                                cx+=1
+                            if(j==ele): 
+                                ce+=1
                             elif(j=='-'):
                                 
                                 cnil+=1
                                 ind=i.index(j)
                     
-                        if(cx==2 and cnil==1):
+                        if(ce==2 and cnil==1):
                             
                             k=tlist.index(i)
                             
-                            i[ind]='o'
+                            i[ind]=ou
                             
                             
                            
                             if(k==0):
-                                tlist[0][ind]='o'
+                                tlist[0][ind]=ou
                             elif(k==1):
-                                tlist[1][ind]='o'
+                                tlist[1][ind]=ou
                             elif(k==2):
-                                tlist[2][ind]='o'
+                                tlist[2][ind]=ou
                             elif(k==3):
-                                tlist[ind][0]='o'
+                                tlist[ind][0]=ou
                             elif(k==4):
-                                tlist[ind][1]='o'
+                                tlist[ind][1]=ou
                             elif(k==5):
-                                tlist[ind][2]='o'
+                                tlist[ind][2]=ou
                             elif(k==6):
-                                tlist[ind][ind]='o'
+                                tlist[ind][ind]=ou
                             elif(k==7):
-                                tlist[ind][2-ind]='o'
+                                tlist[ind][2-ind]=ou
                                 
                                 
                             box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
@@ -214,44 +219,44 @@ while(c>0):
                         if(l==1):
                             break
                         co=0
-                        cx=0
+                        ce=0
                         ind=0
                         cnil=0
                         for j in i:
-                            if(j=='o'):
+                            if(j==ou):
                                 co+=1
                             elif(j=='-'):
                                 cnil+=1
                                 ind=i.index(j)
                             else:
-                                cx+=1
+                                ce+=1
                                 
-                        if(co==1 and cx==0 and cnil==2):
+                        if(co==1 and ce==0 and cnil==2):
                             k=tlist.index(i)
                             if(i[2]=='-'):
                                 ind=2
-                                i[ind]='o'
+                                i[ind]=ou
                             else:
-                                i[ind]='o'
+                                i[ind]=ou
                                 
                                 
                                 
                             if(k==0):
-                                tlist[0][ind]='o'
+                                tlist[0][ind]=ou
                             elif(k==1):
-                                tlist[1][ind]='o'
+                                tlist[1][ind]=ou
                             elif(k==2):
-                                tlist[2][ind]='o'
+                                tlist[2][ind]=ou
                             elif(k==3):
-                                tlist[ind][0]='o'
+                                tlist[ind][0]=ou
                             elif(k==4):
-                                tlist[ind][1]='o'
+                                tlist[ind][1]=ou
                             elif(k==5):
-                                tlist[ind][2]='o'
+                                tlist[ind][2]=ou
                             elif(k==6):
-                                tlist[ind][ind]='o'
+                                tlist[ind][ind]=ou
                             elif(k==7):
-                                tlist[ind][2-ind]='o'
+                                tlist[ind][2-ind]=ou
                             
                             box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
                             xx=0
@@ -265,39 +270,39 @@ while(c>0):
                         if(l==1):
                             break
                         co=0
-                        cx=0
+                        ce=0
                         ind=0
                         cnil=0
                         for j in i:
-                            if(j=='o'):
+                            if(j==ou):
                                 co+=1
                             elif(j=='-'):
                                 cnil+=1
                                 ind=i.index(j)
                             else:
-                                cx+=1
+                                ce+=1
                                 
-                        if(co==1 and cx==1 and cnil==1):
+                        if(co==1 and ce==1 and cnil==1):
                             k=tlist.index(i)
-                            i[ind]='o'
+                            i[ind]=ou
                             
                             
                             if(k==0):
-                                tlist[0][ind]='o'
+                                tlist[0][ind]=ou
                             elif(k==1):
-                                tlist[1][ind]='o'
+                                tlist[1][ind]=ou
                             elif(k==2):
-                                tlist[2][ind]='o'
+                                tlist[2][ind]=ou
                             elif(k==3):
-                                tlist[ind][0]='o'
+                                tlist[ind][0]=ou
                             elif(k==4):
-                                tlist[ind][1]='o'
+                                tlist[ind][1]=ou
                             elif(k==5):
-                                tlist[ind][2]='o'
+                                tlist[ind][2]=ou
                             elif(k==6):
-                                tlist[ind][ind]='o'
+                                tlist[ind][ind]=ou
                             elif(k==7):
-                                tlist[ind][2-ind]='o'
+                                tlist[ind][2-ind]=ou
                             
                             
                             box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
@@ -311,46 +316,46 @@ while(c>0):
                             for i in tlist:
                                 if(l==1):
                                     break
-                                cx=0
+                                ce=0
                                 co=0 
                                 cnil=0
                                 ind=0
                                 for j in i:
-                                    if(j=='x'):
-                                        cx+=1
-                                    elif(j=='o'):
+                                    if(j==ele):
+                                        ce+=1
+                                    elif(j==ou):
                                         co+=1
                                     elif(j=='-'):
                                         cnil+=1
                                         ind=i.index(j)
-                                if(cx==0 and co==0 and cnil==3):
+                                if(ce==0 and co==0 and cnil==3):
                                     k=tlist.index(i)
                                     if(tlist.index(i)==1):
                                         ind=1
-                                        i[ind]='o'
+                                        i[ind]=ou
                                     
                                     else:
                                         
                                         if(i[2]=='-'):
                                             ind=2
-                                            i[ind]='o'
+                                            i[ind]=ou
                     
                                     if(k==0):
-                                        tlist[0][ind]='o'
+                                        tlist[0][ind]=ou
                                     elif(k==1):
-                                        tlist[1][ind]='o'
+                                        tlist[1][ind]=ou
                                     elif(k==2):
-                                        tlist[2][ind]='o'
+                                        tlist[2][ind]=ou
                                     elif(k==3):
-                                        tlist[ind][0]='o'
+                                        tlist[ind][0]=ou
                                     elif(k==4):
-                                        tlist[ind][1]='o'
+                                        tlist[ind][1]=ou
                                     elif(k==5):
-                                        tlist[ind][2]='o'
+                                        tlist[ind][2]=ou
                                     elif(k==6):
-                                        tlist[ind][ind]='o'
+                                        tlist[ind][ind]=ou
                                     elif(k==7):
-                                        tlist[ind][2-ind]='o'
+                                        tlist[ind][2-ind]=ou
                                         
                                     box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
                                     l=1
@@ -365,42 +370,42 @@ while(c>0):
                             for i in tlist:
                                 if(l==1):
                                     break
-                                cx=0
+                                ce=0
                                 co=0 
                                 cnil=0
                                 ind=0
                                 for j in i:
-                                    if(j=='x'):
-                                        cx+=1
-                                    elif(j=='o'):
+                                    if(j==ele):
+                                        ce+=1
+                                    elif(j==ou):
                                         co+=1
                                     elif(j=='-'):
                                         cnil+=1
                                         ind=i.index(j)
-                                if(cx==1 and co==0 and cnil==2):
+                                if(ce==1 and co==0 and cnil==2):
                                     if(tlist[1][1]=='-'):
-                                        tlist[1][1]='o'
+                                        tlist[1][1]=ou
                                         box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
                                     else:
                                         k=tlist.index(i)
-                                        i[ind]='o'
+                                        i[ind]=ou
                                         
                                         if(k==0):
-                                            tlist[0][ind]='o'
+                                            tlist[0][ind]=ou
                                         elif(k==1):
-                                            tlist[1][ind]='o'
+                                            tlist[1][ind]=ou
                                         elif(k==2):
-                                            tlist[2][ind]='o'
+                                            tlist[2][ind]=ou
                                         elif(k==3):
-                                            tlist[ind][0]='o'
+                                            tlist[ind][0]=ou
                                         elif(k==4):
-                                            tlist[ind][1]='o'
+                                            tlist[ind][1]=ou
                                         elif(k==5):
-                                            tlist[ind][2]='o'
+                                            tlist[ind][2]=ou
                                         elif(k==6):
-                                            tlist[ind][ind]='o'
+                                            tlist[ind][ind]=ou
                                         elif(k==7):
-                                            tlist[ind][2-ind]='o'
+                                            tlist[ind][2-ind]=ou
                                         
                                         box[0],box[1],box[2]=tlist[0],tlist[1],tlist[2]
                                     l=1
