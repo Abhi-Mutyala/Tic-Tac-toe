@@ -1,3 +1,4 @@
+import dd
 box=[['-','-','-'],['-','-','-'],['-','-','-']]
 c=1
 for i in box:
@@ -7,6 +8,7 @@ for i in box:
 g=0
 if(g==0):
     ele=input("Enter the element you want x or o:")
+    name=input("Enter the your good name:")
     chance=input("Do you want to start first or shall I(I for you U for me):")
     if(ele=='x'):
         ou='o'
@@ -59,15 +61,29 @@ while(c>0):
     if(cc>0):
         print("game over")
         c=0
+        winn=""
         if(chance=='U'):
-            print("you won")
+            winn=name+"\n"
+            print("you won congrats",name)
         else:
+            winn="computer\n"
             print("I won")
+            
+        fi=open(r"C:\Users\ABHILASH\Music\gameres.txt","a")
+        s=str(dd.d)+"-"+winn
+        fi.write(s)
+        fi.close()
+        
         break
     else:
         
         if(count==9):
             print("it is a draw match")
+            winn="draw match\n"
+            fi=open(r"C:\Users\ABHILASH\Music\gameres.txt","a")
+            s=str(dd.d)+"-"+winn
+            fi.write(s)
+            fi.close()
             c=0
             break
         
